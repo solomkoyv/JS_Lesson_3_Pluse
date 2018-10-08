@@ -4,38 +4,38 @@ console.log(str);
 str = str[0].toUpperCase() + str.slice(1);
 console.log(str);
 
-str = str.replace(new RegExp("-", 'g'), " ");
+str = str.replace(new RegExp("-", "g"), " ");
 console.log(str);
 
 let lastIndex = str.lastIndexOf(" ");
 
 str = str.split(" ").pop();
 // str = str.slice(str.lastIndexOf(' ') + 1);
-str = str.replace('им', 'оо');
+str = str.replace("им", "оо");
 console.log(str);
 
-let arr = [20, 33, 1, 'Человек', 2, 3];
-let newArr = [];
+let arr = [20, 33, 1, "Человек", 2, 3];
+let res = 0;
 arr.forEach(function (i) {
-  if (!(isNaN(i))) {
-    i = Math.sqrt(i *= i);
-    newArr.push(i);
+  if (!isNaN(i)) {
+    res += (i ** 3);
   }
 });
-console.log(newArr);
+console.log(Math.sqrt(res));
 
-str = '   Этот java script очень сложная штука и как с ним справиться я не мойму   ';
+str =
+  "   Этот java script очень сложная штука и как с ним справиться я не мойму   ";
 
 console.log(str);
 
 function myFunc(str) {
-  if ((typeof (str)) !== 'string') {
-    console.log(' Не строка');
+  if (typeof str !== "string") {
+    console.log(" Не строка");
   } else {
     srt = str.trim();
     let sliced = str.slice(0, 50);
     if (sliced.length < str.length) {
-      return sliced += '...';
+      return (sliced += "...");
     }
   }
   console.log(sliced);
